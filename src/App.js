@@ -1,7 +1,9 @@
-import { people } from "./constants";
 import RegularList from "./RegularList";
+import NumberedList from "./NumberedList";
+import { people, products } from "./constants";
 import LargePersonListItem from "./people/LargePersonListItem";
 import SmallPersonLIstItem from "./people/SmallPersonLIstItem";
+import LargeProductListItem from "./products/LargeProductListItem";
 
 function App() {
   return (
@@ -15,6 +17,11 @@ function App() {
         items={people}
         resourceName="person"
         itemComponent={LargePersonListItem}
+      />
+      <NumberedList
+        items={products}
+        resourceName="product"
+        itemComponent={LargeProductListItem}
       />
     </>
   );
