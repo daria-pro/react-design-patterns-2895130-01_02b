@@ -1,15 +1,11 @@
-import { SplitScreen } from "./components/SplitScreen";
-
-const LeftHandComponent = () => {
-  return <h1>Left!</h1>;
-};
-
-const RightHandComponent = () => {
-  return <h1>Right!</h1>;
-};
+import CurrentUserLoader from "./CurrentUserLoader";
+import { UserInfo } from "./UserInfo";
 
 function App() {
-  return <SplitScreen left={LeftHandComponent} right={RightHandComponent} />;
+  return (
+    <CurrentUserLoader>
+      <UserInfo />
+    </CurrentUserLoader>
+  );
 }
-
 export default App;
